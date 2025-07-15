@@ -1,0 +1,988 @@
+2025-04-06 14:41:28,303 - main - INFO - Running database maintenance
+2025-04-06 14:41:28,303 - main - INFO - ==================================================
+2025-04-06 14:41:28,303 - main - INFO - TRADING PLATFORM INITIALIZATION
+2025-04-06 14:41:28,303 - main - INFO - ==================================================
+2025-04-06 14:41:28,303 - main - INFO - Python Version: 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+2025-04-06 14:41:28,303 - main - INFO - Working Directory: C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform
+2025-04-06 14:41:28,303 - main - INFO - Platform: win32
+2025-04-06 14:41:28,303 - main - INFO - System Memory: Total: 32212.70 MB, Available: 16161.79 MB, Used: 49.8%
+2025-04-06 14:41:28,303 - main - INFO - CPU Usage: 0.0%
+2025-04-06 14:41:28,303 - main - INFO - Current Process Memory: 23.27 MB
+2025-04-06 14:41:28,303 - main - INFO - Starting SystemInitializer...
+2025-04-06 14:41:28,303 - main - INFO - Starting sequential initialization (8 stages)
+2025-04-06 14:41:28,303 - main - INFO - Stage 1/8: Database Initialization
+2025-04-06 14:41:28,303 - main - INFO - Initializing init_database
+2025-04-06 14:41:28,646 - database - INFO - Running database maintenance
+2025-04-06 14:41:28,646 - database - INFO - Started background maintenance thread
+2025-04-06 14:41:28,646 - database - ERROR - Error pruning old data: no such table: raw_data
+2025-04-06 14:41:28,646 - database - INFO - Database backup created at backups\trading_backup_20250406144128.db
+2025-04-06 14:41:28,646 - database - INFO - Database optimization completed successfully
+2025-04-06 14:41:28,662 - database - INFO - Database optimization completed successfully
+2025-04-06 14:41:28,662 - database - INFO - Database maintenance completed successfully
+2025-04-06 14:41:28,665 - database - INFO - Database initialized successfully.
+2025-04-06 14:41:28,666 - main - INFO - Successfully initialized init_database in 0.36s
+2025-04-06 14:41:28,666 - main - INFO - Stage 2/8: Historical Data Import
+2025-04-06 14:41:28,666 - main - INFO - Initializing init_historical_data
+2025-04-06 14:41:28,933 - main - INFO - Importing historical data for NVDA
+2025-04-06 14:41:28,934 - historical_data_import - INFO - Retrieving historical data for NVDA from 2024-04-06 14:41:28.934522 to 2025-04-06 14:41:28.934522
+2025-04-06 14:41:28,949 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:28,949 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:29,009 - historical_data_import - INFO - Successfully retrieved 250 bars for NVDA from Alpaca
+2025-04-06 14:41:29,009 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:29,009 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:29,009 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:29,009 - historical_data_import - INFO - Successfully retrieved data for NVDA from _get_alpaca_data
+2025-04-06 14:41:29,009 - historical_data_import - INFO - Saved 250 rows of NVDA data to cache
+2025-04-06 14:41:29,009 - main - INFO - Successfully imported historical data for NVDA
+2025-04-06 14:41:30,024 - main - INFO - Importing historical data for AAPL
+2025-04-06 14:41:30,024 - historical_data_import - INFO - Retrieving historical data for AAPL from 2024-04-06 14:41:30.024891 to 2025-04-06 14:41:30.024891
+2025-04-06 14:41:30,063 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:30,063 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:30,111 - historical_data_import - INFO - Successfully retrieved 250 bars for AAPL from Alpaca
+2025-04-06 14:41:30,111 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:30,111 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:30,111 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:30,111 - historical_data_import - INFO - Successfully retrieved data for AAPL from _get_alpaca_data
+2025-04-06 14:41:30,125 - historical_data_import - INFO - Saved 250 rows of AAPL data to cache
+2025-04-06 14:41:30,125 - main - INFO - Successfully imported historical data for AAPL
+2025-04-06 14:41:31,138 - main - INFO - Importing historical data for AMD
+2025-04-06 14:41:31,138 - historical_data_import - INFO - Retrieving historical data for AMD from 2024-04-06 14:41:31.138103 to 2025-04-06 14:41:31.138103
+2025-04-06 14:41:31,169 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:31,169 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:31,219 - historical_data_import - INFO - Successfully retrieved 250 bars for AMD from Alpaca
+2025-04-06 14:41:31,220 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:31,221 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:31,221 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:31,221 - historical_data_import - INFO - Successfully retrieved data for AMD from _get_alpaca_data
+2025-04-06 14:41:31,225 - historical_data_import - INFO - Saved 250 rows of AMD data to cache
+2025-04-06 14:41:31,225 - main - INFO - Successfully imported historical data for AMD
+2025-04-06 14:41:32,235 - main - INFO - Importing historical data for TSLA
+2025-04-06 14:41:32,235 - historical_data_import - INFO - Retrieving historical data for TSLA from 2024-04-06 14:41:32.235651 to 2025-04-06 14:41:32.235651
+2025-04-06 14:41:32,278 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:32,279 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:32,327 - historical_data_import - INFO - Successfully retrieved 250 bars for TSLA from Alpaca
+2025-04-06 14:41:32,328 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:32,328 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:32,328 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:32,328 - historical_data_import - INFO - Successfully retrieved data for TSLA from _get_alpaca_data
+2025-04-06 14:41:32,328 - historical_data_import - INFO - Saved 250 rows of TSLA data to cache
+2025-04-06 14:41:32,328 - main - INFO - Successfully imported historical data for TSLA
+2025-04-06 14:41:33,336 - main - INFO - Importing historical data for META
+2025-04-06 14:41:33,336 - historical_data_import - INFO - Retrieving historical data for META from 2024-04-06 14:41:33.336099 to 2025-04-06 14:41:33.336099
+2025-04-06 14:41:33,379 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:33,380 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:33,431 - historical_data_import - INFO - Successfully retrieved 250 bars for META from Alpaca
+2025-04-06 14:41:33,431 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:33,431 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:33,431 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:33,438 - historical_data_import - INFO - Successfully retrieved data for META from _get_alpaca_data
+2025-04-06 14:41:33,439 - historical_data_import - INFO - Saved 250 rows of META data to cache
+2025-04-06 14:41:33,439 - main - INFO - Successfully imported historical data for META
+2025-04-06 14:41:34,465 - main - INFO - Importing historical data for GOOGL
+2025-04-06 14:41:34,465 - historical_data_import - INFO - Retrieving historical data for GOOGL from 2024-04-06 14:41:34.465897 to 2025-04-06 14:41:34.465897
+2025-04-06 14:41:34,493 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:34,494 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:34,546 - historical_data_import - INFO - Successfully retrieved 250 bars for GOOGL from Alpaca
+2025-04-06 14:41:34,548 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:34,548 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:34,548 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:34,550 - historical_data_import - INFO - Successfully retrieved data for GOOGL from _get_alpaca_data
+2025-04-06 14:41:34,552 - historical_data_import - INFO - Saved 250 rows of GOOGL data to cache
+2025-04-06 14:41:34,553 - main - INFO - Successfully imported historical data for GOOGL
+2025-04-06 14:41:35,562 - main - INFO - Importing historical data for AMZN
+2025-04-06 14:41:35,562 - historical_data_import - INFO - Retrieving historical data for AMZN from 2024-04-06 14:41:35.562462 to 2025-04-06 14:41:35.562462
+2025-04-06 14:41:35,600 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:35,600 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:35,646 - historical_data_import - INFO - Successfully retrieved 250 bars for AMZN from Alpaca
+2025-04-06 14:41:35,646 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:35,646 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:35,646 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:35,646 - historical_data_import - INFO - Successfully retrieved data for AMZN from _get_alpaca_data
+2025-04-06 14:41:35,646 - historical_data_import - INFO - Saved 250 rows of AMZN data to cache
+2025-04-06 14:41:35,646 - main - INFO - Successfully imported historical data for AMZN
+2025-04-06 14:41:36,646 - main - INFO - Importing historical data for MSFT
+2025-04-06 14:41:36,646 - historical_data_import - INFO - Retrieving historical data for MSFT from 2024-04-06 14:41:36.646934 to 2025-04-06 14:41:36.646934
+2025-04-06 14:41:36,685 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:36,685 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:36,730 - historical_data_import - INFO - Successfully retrieved 250 bars for MSFT from Alpaca
+2025-04-06 14:41:36,730 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:36,730 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:36,730 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:36,730 - historical_data_import - INFO - Successfully retrieved data for MSFT from _get_alpaca_data
+2025-04-06 14:41:36,730 - historical_data_import - INFO - Saved 250 rows of MSFT data to cache
+2025-04-06 14:41:36,745 - main - INFO - Successfully imported historical data for MSFT
+2025-04-06 14:41:37,749 - main - INFO - Importing historical data for QQQ
+2025-04-06 14:41:37,749 - historical_data_import - INFO - Retrieving historical data for QQQ from 2024-04-06 14:41:37.749353 to 2025-04-06 14:41:37.749353
+2025-04-06 14:41:37,798 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:37,798 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:37,848 - historical_data_import - INFO - Successfully retrieved 250 bars for QQQ from Alpaca
+2025-04-06 14:41:37,849 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:37,849 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:37,849 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:37,852 - historical_data_import - INFO - Successfully retrieved data for QQQ from _get_alpaca_data
+2025-04-06 14:41:37,854 - historical_data_import - INFO - Saved 250 rows of QQQ data to cache
+2025-04-06 14:41:37,855 - main - INFO - Successfully imported historical data for QQQ
+2025-04-06 14:41:38,858 - main - INFO - Importing historical data for SPY
+2025-04-06 14:41:38,858 - historical_data_import - INFO - Retrieving historical data for SPY from 2024-04-06 14:41:38.858646 to 2025-04-06 14:41:38.858646
+2025-04-06 14:41:38,874 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:38,874 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:38,932 - historical_data_import - INFO - Successfully retrieved 250 bars for SPY from Alpaca
+2025-04-06 14:41:38,932 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:38,932 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:38,932 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:38,932 - historical_data_import - INFO - Successfully retrieved data for SPY from _get_alpaca_data
+2025-04-06 14:41:38,932 - historical_data_import - INFO - Saved 250 rows of SPY data to cache
+2025-04-06 14:41:38,932 - main - INFO - Successfully imported historical data for SPY
+2025-04-06 14:41:39,946 - main - INFO - Importing historical data for DIA
+2025-04-06 14:41:39,946 - historical_data_import - INFO - Retrieving historical data for DIA from 2024-04-06 14:41:39.946711 to 2025-04-06 14:41:39.946711
+2025-04-06 14:41:39,994 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:39,994 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:40,050 - historical_data_import - INFO - Successfully retrieved 250 bars for DIA from Alpaca
+2025-04-06 14:41:40,051 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:40,051 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:40,051 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:40,053 - historical_data_import - INFO - Successfully retrieved data for DIA from _get_alpaca_data
+2025-04-06 14:41:40,055 - historical_data_import - INFO - Saved 250 rows of DIA data to cache
+2025-04-06 14:41:40,056 - main - INFO - Successfully imported historical data for DIA
+2025-04-06 14:41:41,070 - main - INFO - Successfully initialized init_historical_data in 12.40s
+2025-04-06 14:41:41,086 - main - INFO - Stage 3/8: Model Initialization
+2025-04-06 14:41:41,086 - main - INFO - Initializing init_model
+2025-04-06 14:41:41,538 - model - INFO - StockAnalysisModel initialized
+2025-04-06 14:41:41,538 - main - INFO - StockAnalysisModel initialized successfully with required methods
+2025-04-06 14:41:41,538 - main - INFO - Successfully initialized init_model in 0.45s
+2025-04-06 14:41:41,538 - main - INFO - Stage 4/8: Model Training
+2025-04-06 14:41:41,538 - main - INFO - Initializing train_basic_models
+2025-04-06 14:41:41,538 - main - WARNING - Model is None, attempting to create a new instance directly
+2025-04-06 14:41:41,538 - main - INFO - Reloading model module
+2025-04-06 14:41:41,538 - model - INFO - StockAnalysisModel initialized
+2025-04-06 14:41:41,538 - main - INFO - Successfully created a fresh StockAnalysisModel instance
+2025-04-06 14:41:41,538 - main - INFO - Training model for NVDA
+2025-04-06 14:41:41,538 - model - INFO - Training model for NVDA
+2025-04-06 14:41:41,538 - historical_data_import - INFO - Retrieving historical data for NVDA from 2024-04-06 14:41:41.538608 to 2025-04-06 14:41:41.538608
+2025-04-06 14:41:41,573 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:41,573 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:41,619 - historical_data_import - INFO - Successfully retrieved 250 bars for NVDA from Alpaca
+2025-04-06 14:41:41,619 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:41,619 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:41,619 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:41,619 - historical_data_import - INFO - Successfully retrieved data for NVDA from _get_alpaca_data
+2025-04-06 14:41:41,619 - historical_data_import - INFO - Saved 250 rows of NVDA data to cache
+2025-04-06 14:41:41,655 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:42,618 - model - INFO - Cross-validation RMSE for NVDA - RF: 168.7058, XGB: 143.6088, Ensemble: 153.7641
+2025-04-06 14:41:42,618 - model - INFO - Training final models for NVDA on all data
+2025-04-06 14:41:42,935 - model - INFO - Models and metrics saved for NVDA
+2025-04-06 14:41:42,935 - model - INFO - Successfully trained and saved model for NVDA
+2025-04-06 14:41:42,951 - model - INFO - Feature importance for NVDA: {'Volume': 0.41839148709292995, 'Close': 0.2112376121361715, 'High': 0.1477004113457064, 'Low': 0.09726250091283646, 'Open': 0.09012650466104162, 'MACD_Signal': 0.01260451806862773, 'SMA20': 0.01061817132510274, 'MACD': 0.008141459817591847, 'RSI': 0.003917334639991708, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:42,952 - main - INFO - Successfully trained model for NVDA
+2025-04-06 14:41:42,952 - main - INFO - Analyzing feature importance for NVDA
+2025-04-06 14:41:42,956 - model - INFO - Feature importance for NVDA: {'Volume': 0.41839148709292995, 'Close': 0.2112376121361715, 'High': 0.1477004113457064, 'Low': 0.09726250091283646, 'Open': 0.09012650466104162, 'MACD_Signal': 0.01260451806862773, 'SMA20': 0.01061817132510274, 'MACD': 0.008141459817591847, 'RSI': 0.003917334639991708, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:43,974 - main - INFO - Training model for AAPL
+2025-04-06 14:41:43,974 - model - INFO - Training model for AAPL
+2025-04-06 14:41:43,974 - historical_data_import - INFO - Retrieving historical data for AAPL from 2024-04-06 14:41:43.974514 to 2025-04-06 14:41:43.974514
+2025-04-06 14:41:44,011 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:44,011 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:44,064 - historical_data_import - INFO - Successfully retrieved 250 bars for AAPL from Alpaca
+2025-04-06 14:41:44,065 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:44,065 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:44,065 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:44,067 - historical_data_import - INFO - Successfully retrieved data for AAPL from _get_alpaca_data
+2025-04-06 14:41:44,070 - historical_data_import - INFO - Saved 250 rows of AAPL data to cache
+2025-04-06 14:41:44,094 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:44,962 - model - INFO - Cross-validation RMSE for AAPL - RF: 10.4401, XGB: 11.1511, Ensemble: 10.6920
+2025-04-06 14:41:44,962 - model - INFO - Training final models for AAPL on all data
+2025-04-06 14:41:45,242 - model - INFO - Models and metrics saved for AAPL
+2025-04-06 14:41:45,242 - model - INFO - Successfully trained and saved model for AAPL
+2025-04-06 14:41:45,263 - model - INFO - Feature importance for AAPL: {'Close': 0.5702380762242982, 'High': 0.18803427405558817, 'SMA20': 0.11594815997547123, 'Low': 0.07896130785683031, 'Open': 0.023227076830577262, 'MACD': 0.007870561365374578, 'RSI': 0.00719275923541753, 'Volume': 0.004464794275641536, 'MACD_Signal': 0.004062990180801189, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:45,263 - main - INFO - Successfully trained model for AAPL
+2025-04-06 14:41:45,263 - main - INFO - Analyzing feature importance for AAPL
+2025-04-06 14:41:45,276 - model - INFO - Feature importance for AAPL: {'Close': 0.5702380762242982, 'High': 0.18803427405558817, 'SMA20': 0.11594815997547123, 'Low': 0.07896130785683031, 'Open': 0.023227076830577262, 'MACD': 0.007870561365374578, 'RSI': 0.00719275923541753, 'Volume': 0.004464794275641536, 'MACD_Signal': 0.004062990180801189, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:46,296 - main - INFO - Training model for AMD
+2025-04-06 14:41:46,296 - model - INFO - Training model for AMD
+2025-04-06 14:41:46,296 - historical_data_import - INFO - Retrieving historical data for AMD from 2024-04-06 14:41:46.296716 to 2025-04-06 14:41:46.296716
+2025-04-06 14:41:46,329 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:46,329 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:46,388 - historical_data_import - INFO - Successfully retrieved 250 bars for AMD from Alpaca
+2025-04-06 14:41:46,389 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:46,389 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:46,389 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:46,389 - historical_data_import - INFO - Successfully retrieved data for AMD from _get_alpaca_data
+2025-04-06 14:41:46,389 - historical_data_import - INFO - Saved 250 rows of AMD data to cache
+2025-04-06 14:41:46,406 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:47,315 - model - INFO - Cross-validation RMSE for AMD - RF: 10.2348, XGB: 10.1618, Ensemble: 10.0913
+2025-04-06 14:41:47,315 - model - INFO - Training final models for AMD on all data
+2025-04-06 14:41:47,598 - model - INFO - Models and metrics saved for AMD
+2025-04-06 14:41:47,598 - model - INFO - Successfully trained and saved model for AMD
+2025-04-06 14:41:47,631 - model - INFO - Feature importance for AMD: {'Low': 0.5323078401173637, 'Close': 0.21785132316717348, 'SMA20': 0.0988393306321999, 'Open': 0.09021437113393055, 'High': 0.046551717873247314, 'MACD_Signal': 0.004408941610073126, 'RSI': 0.0035746845907332677, 'Volume': 0.003546081107922547, 'MACD': 0.0027057097673563093, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:47,632 - main - INFO - Successfully trained model for AMD
+2025-04-06 14:41:47,632 - main - INFO - Analyzing feature importance for AMD
+2025-04-06 14:41:47,643 - model - INFO - Feature importance for AMD: {'Low': 0.5323078401173637, 'Close': 0.21785132316717348, 'SMA20': 0.0988393306321999, 'Open': 0.09021437113393055, 'High': 0.046551717873247314, 'MACD_Signal': 0.004408941610073126, 'RSI': 0.0035746845907332677, 'Volume': 0.003546081107922547, 'MACD': 0.0027057097673563093, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:48,667 - main - INFO - Training model for TSLA
+2025-04-06 14:41:48,667 - model - INFO - Training model for TSLA
+2025-04-06 14:41:48,667 - historical_data_import - INFO - Retrieving historical data for TSLA from 2024-04-06 14:41:48.667438 to 2025-04-06 14:41:48.667438
+2025-04-06 14:41:48,708 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:48,708 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:48,757 - historical_data_import - INFO - Successfully retrieved 250 bars for TSLA from Alpaca
+2025-04-06 14:41:48,758 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:48,758 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:48,758 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:48,758 - historical_data_import - INFO - Successfully retrieved data for TSLA from _get_alpaca_data
+2025-04-06 14:41:48,758 - historical_data_import - INFO - Saved 250 rows of TSLA data to cache
+2025-04-06 14:41:48,776 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:49,655 - model - INFO - Cross-validation RMSE for TSLA - RF: 44.4481, XGB: 48.4151, Ensemble: 46.1659
+2025-04-06 14:41:49,655 - model - INFO - Training final models for TSLA on all data
+2025-04-06 14:41:49,948 - model - INFO - Models and metrics saved for TSLA
+2025-04-06 14:41:49,948 - model - INFO - Successfully trained and saved model for TSLA
+2025-04-06 14:41:49,969 - model - INFO - Feature importance for TSLA: {'Close': 0.5990010511805648, 'Low': 0.24688151598963895, 'High': 0.1014523969878407, 'Open': 0.031581001396387455, 'MACD': 0.008313999508691087, 'SMA20': 0.005946761464508268, 'RSI': 0.0024907945323770354, 'Volume': 0.0021701763339734416, 'MACD_Signal': 0.002162302606018401, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:49,969 - main - INFO - Successfully trained model for TSLA
+2025-04-06 14:41:49,969 - main - INFO - Analyzing feature importance for TSLA
+2025-04-06 14:41:49,984 - model - INFO - Feature importance for TSLA: {'Close': 0.5990010511805648, 'Low': 0.24688151598963895, 'High': 0.1014523969878407, 'Open': 0.031581001396387455, 'MACD': 0.008313999508691087, 'SMA20': 0.005946761464508268, 'RSI': 0.0024907945323770354, 'Volume': 0.0021701763339734416, 'MACD_Signal': 0.002162302606018401, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:51,005 - main - INFO - Training model for META
+2025-04-06 14:41:51,005 - model - INFO - Training model for META
+2025-04-06 14:41:51,005 - historical_data_import - INFO - Retrieving historical data for META from 2024-04-06 14:41:51.005817 to 2025-04-06 14:41:51.005817
+2025-04-06 14:41:51,028 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:51,028 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:51,092 - historical_data_import - INFO - Successfully retrieved 250 bars for META from Alpaca
+2025-04-06 14:41:51,092 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:51,092 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:51,092 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:51,092 - historical_data_import - INFO - Successfully retrieved data for META from _get_alpaca_data
+2025-04-06 14:41:51,092 - historical_data_import - INFO - Saved 250 rows of META data to cache
+2025-04-06 14:41:51,128 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:52,043 - model - INFO - Cross-validation RMSE for META - RF: 26.9669, XGB: 31.0746, Ensemble: 28.4516
+2025-04-06 14:41:52,043 - model - INFO - Training final models for META on all data
+2025-04-06 14:41:52,322 - model - INFO - Models and metrics saved for META
+2025-04-06 14:41:52,322 - model - INFO - Successfully trained and saved model for META
+2025-04-06 14:41:52,349 - model - INFO - Feature importance for META: {'Close': 0.4484932520033279, 'Low': 0.37475224708564914, 'High': 0.11250458091202191, 'Open': 0.04428871180319286, 'MACD': 0.007326977748452633, 'Volume': 0.0039356606667443625, 'MACD_Signal': 0.0037044373286262617, 'RSI': 0.002995901828331865, 'SMA20': 0.0019982306236530447, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:52,349 - main - INFO - Successfully trained model for META
+2025-04-06 14:41:52,349 - main - INFO - Analyzing feature importance for META
+2025-04-06 14:41:52,363 - model - INFO - Feature importance for META: {'Close': 0.4484932520033279, 'Low': 0.37475224708564914, 'High': 0.11250458091202191, 'Open': 0.04428871180319286, 'MACD': 0.007326977748452633, 'Volume': 0.0039356606667443625, 'MACD_Signal': 0.0037044373286262617, 'RSI': 0.002995901828331865, 'SMA20': 0.0019982306236530447, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:53,391 - main - INFO - Training model for GOOGL
+2025-04-06 14:41:53,391 - model - INFO - Training model for GOOGL
+2025-04-06 14:41:53,391 - historical_data_import - INFO - Retrieving historical data for GOOGL from 2024-04-06 14:41:53.391059 to 2025-04-06 14:41:53.391059
+2025-04-06 14:41:53,431 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:53,432 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:53,480 - historical_data_import - INFO - Successfully retrieved 250 bars for GOOGL from Alpaca
+2025-04-06 14:41:53,480 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:53,480 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:53,480 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:53,480 - historical_data_import - INFO - Successfully retrieved data for GOOGL from _get_alpaca_data
+2025-04-06 14:41:53,480 - historical_data_import - INFO - Saved 250 rows of GOOGL data to cache
+2025-04-06 14:41:53,512 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:54,394 - model - INFO - Cross-validation RMSE for GOOGL - RF: 5.8586, XGB: 7.0073, Ensemble: 6.3069
+2025-04-06 14:41:54,394 - model - INFO - Training final models for GOOGL on all data
+2025-04-06 14:41:54,668 - model - INFO - Models and metrics saved for GOOGL
+2025-04-06 14:41:54,668 - model - INFO - Successfully trained and saved model for GOOGL
+2025-04-06 14:41:54,690 - model - INFO - Feature importance for GOOGL: {'Close': 0.49470102778714947, 'Low': 0.33467833954885173, 'High': 0.11795211737949143, 'Open': 0.014113722912052191, 'Volume': 0.009553900420867395, 'MACD_Signal': 0.009012779336604142, 'RSI': 0.008458394969493301, 'SMA20': 0.005816358482696063, 'MACD': 0.005713359162794387, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:54,690 - main - INFO - Successfully trained model for GOOGL
+2025-04-06 14:41:54,690 - main - INFO - Analyzing feature importance for GOOGL
+2025-04-06 14:41:54,704 - model - INFO - Feature importance for GOOGL: {'Close': 0.49470102778714947, 'Low': 0.33467833954885173, 'High': 0.11795211737949143, 'Open': 0.014113722912052191, 'Volume': 0.009553900420867395, 'MACD_Signal': 0.009012779336604142, 'RSI': 0.008458394969493301, 'SMA20': 0.005816358482696063, 'MACD': 0.005713359162794387, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:55,730 - main - INFO - Training model for AMZN
+2025-04-06 14:41:55,746 - model - INFO - Training model for AMZN
+2025-04-06 14:41:55,746 - historical_data_import - INFO - Retrieving historical data for AMZN from 2024-04-06 14:41:55.746280 to 2025-04-06 14:41:55.746280
+2025-04-06 14:41:55,769 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:55,769 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:55,814 - historical_data_import - INFO - Successfully retrieved 250 bars for AMZN from Alpaca
+2025-04-06 14:41:55,814 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:55,814 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:55,814 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:55,814 - historical_data_import - INFO - Successfully retrieved data for AMZN from _get_alpaca_data
+2025-04-06 14:41:55,830 - historical_data_import - INFO - Saved 250 rows of AMZN data to cache
+2025-04-06 14:41:55,847 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:56,779 - model - INFO - Cross-validation RMSE for AMZN - RF: 8.6071, XGB: 9.8111, Ensemble: 9.0876
+2025-04-06 14:41:56,779 - model - INFO - Training final models for AMZN on all data
+2025-04-06 14:41:57,076 - model - INFO - Models and metrics saved for AMZN
+2025-04-06 14:41:57,076 - model - INFO - Successfully trained and saved model for AMZN
+2025-04-06 14:41:57,095 - model - INFO - Feature importance for AMZN: {'Close': 0.5013783219819645, 'Low': 0.21746331090393212, 'High': 0.21173051664291423, 'Open': 0.04701323490605545, 'MACD_Signal': 0.0066758820620480535, 'MACD': 0.004523188937602605, 'SMA20': 0.004276251947028248, 'Volume': 0.004211610826965666, 'RSI': 0.002727681791489114, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:57,095 - main - INFO - Successfully trained model for AMZN
+2025-04-06 14:41:57,095 - main - INFO - Analyzing feature importance for AMZN
+2025-04-06 14:41:57,107 - model - INFO - Feature importance for AMZN: {'Close': 0.5013783219819645, 'Low': 0.21746331090393212, 'High': 0.21173051664291423, 'Open': 0.04701323490605545, 'MACD_Signal': 0.0066758820620480535, 'MACD': 0.004523188937602605, 'SMA20': 0.004276251947028248, 'Volume': 0.004211610826965666, 'RSI': 0.002727681791489114, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:58,129 - main - INFO - Training model for MSFT
+2025-04-06 14:41:58,129 - model - INFO - Training model for MSFT
+2025-04-06 14:41:58,129 - historical_data_import - INFO - Retrieving historical data for MSFT from 2024-04-06 14:41:58.129091 to 2025-04-06 14:41:58.129091
+2025-04-06 14:41:58,166 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:41:58,166 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:41:58,218 - historical_data_import - INFO - Successfully retrieved 250 bars for MSFT from Alpaca
+2025-04-06 14:41:58,219 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:41:58,219 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:41:58,219 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:41:58,219 - historical_data_import - INFO - Successfully retrieved data for MSFT from _get_alpaca_data
+2025-04-06 14:41:58,219 - historical_data_import - INFO - Saved 250 rows of MSFT data to cache
+2025-04-06 14:41:58,250 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:41:59,212 - model - INFO - Cross-validation RMSE for MSFT - RF: 12.0670, XGB: 13.0898, Ensemble: 12.4165
+2025-04-06 14:41:59,212 - model - INFO - Training final models for MSFT on all data
+2025-04-06 14:41:59,505 - model - INFO - Models and metrics saved for MSFT
+2025-04-06 14:41:59,505 - model - INFO - Successfully trained and saved model for MSFT
+2025-04-06 14:41:59,528 - model - INFO - Feature importance for MSFT: {'Close': 0.7305350602779146, 'Low': 0.1181748283981524, 'High': 0.053333304752490436, 'SMA20': 0.03080072865137105, 'MACD': 0.02147326221156257, 'Volume': 0.013571822576269146, 'RSI': 0.012396558856995879, 'Open': 0.010124750623376757, 'MACD_Signal': 0.009589683651867046, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:41:59,528 - main - INFO - Successfully trained model for MSFT
+2025-04-06 14:41:59,528 - main - INFO - Analyzing feature importance for MSFT
+2025-04-06 14:41:59,540 - model - INFO - Feature importance for MSFT: {'Close': 0.7305350602779146, 'Low': 0.1181748283981524, 'High': 0.053333304752490436, 'SMA20': 0.03080072865137105, 'MACD': 0.02147326221156257, 'Volume': 0.013571822576269146, 'RSI': 0.012396558856995879, 'Open': 0.010124750623376757, 'MACD_Signal': 0.009589683651867046, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:00,560 - main - INFO - Training model for QQQ
+2025-04-06 14:42:00,560 - model - INFO - Training model for QQQ
+2025-04-06 14:42:00,560 - historical_data_import - INFO - Retrieving historical data for QQQ from 2024-04-06 14:42:00.560391 to 2025-04-06 14:42:00.560391
+2025-04-06 14:42:00,591 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:42:00,591 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:42:00,635 - historical_data_import - INFO - Successfully retrieved 250 bars for QQQ from Alpaca
+2025-04-06 14:42:00,635 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:42:00,635 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:42:00,635 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:42:00,635 - historical_data_import - INFO - Successfully retrieved data for QQQ from _get_alpaca_data
+2025-04-06 14:42:00,635 - historical_data_import - INFO - Saved 250 rows of QQQ data to cache
+2025-04-06 14:42:00,668 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:42:01,548 - model - INFO - Cross-validation RMSE for QQQ - RF: 14.6411, XGB: 16.0066, Ensemble: 15.1874
+2025-04-06 14:42:01,548 - model - INFO - Training final models for QQQ on all data
+2025-04-06 14:42:01,816 - model - INFO - Models and metrics saved for QQQ
+2025-04-06 14:42:01,816 - model - INFO - Successfully trained and saved model for QQQ
+2025-04-06 14:42:01,831 - model - INFO - Feature importance for QQQ: {'Low': 0.6108171137779027, 'Close': 0.2937733656142138, 'High': 0.04107995850519465, 'Open': 0.028323156639324443, 'MACD_Signal': 0.00696890173715597, 'SMA20': 0.006446173727614762, 'Volume': 0.005186877697216163, 'MACD': 0.0039850100013404804, 'RSI': 0.003419442300037101, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:01,831 - main - INFO - Successfully trained model for QQQ
+2025-04-06 14:42:01,847 - main - INFO - Analyzing feature importance for QQQ
+2025-04-06 14:42:01,854 - model - INFO - Feature importance for QQQ: {'Low': 0.6108171137779027, 'Close': 0.2937733656142138, 'High': 0.04107995850519465, 'Open': 0.028323156639324443, 'MACD_Signal': 0.00696890173715597, 'SMA20': 0.006446173727614762, 'Volume': 0.005186877697216163, 'MACD': 0.0039850100013404804, 'RSI': 0.003419442300037101, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:02,885 - main - INFO - Training model for SPY
+2025-04-06 14:42:02,885 - model - INFO - Training model for SPY
+2025-04-06 14:42:02,885 - historical_data_import - INFO - Retrieving historical data for SPY from 2024-04-06 14:42:02.885183 to 2025-04-06 14:42:02.885183
+2025-04-06 14:42:02,907 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:42:02,907 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:42:02,990 - historical_data_import - INFO - Successfully retrieved 250 bars for SPY from Alpaca
+2025-04-06 14:42:02,991 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:42:02,991 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:42:02,991 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:42:02,993 - historical_data_import - INFO - Successfully retrieved data for SPY from _get_alpaca_data
+2025-04-06 14:42:02,995 - historical_data_import - INFO - Saved 250 rows of SPY data to cache
+2025-04-06 14:42:03,020 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:42:03,888 - model - INFO - Cross-validation RMSE for SPY - RF: 13.0006, XGB: 14.7523, Ensemble: 13.7845
+2025-04-06 14:42:03,888 - model - INFO - Training final models for SPY on all data
+2025-04-06 14:42:04,160 - model - INFO - Models and metrics saved for SPY
+2025-04-06 14:42:04,160 - model - INFO - Successfully trained and saved model for SPY
+2025-04-06 14:42:04,186 - model - INFO - Feature importance for SPY: {'Low': 0.40439766454017567, 'Close': 0.3670355396503645, 'High': 0.1308555658954431, 'Open': 0.07716846737930555, 'SMA20': 0.005593126397982812, 'Volume': 0.005373654093015282, 'MACD_Signal': 0.003610406978488134, 'RSI': 0.0031138370910065187, 'MACD': 0.0028517379742184004, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:04,187 - main - INFO - Successfully trained model for SPY
+2025-04-06 14:42:04,187 - main - INFO - Analyzing feature importance for SPY
+2025-04-06 14:42:04,193 - model - INFO - Feature importance for SPY: {'Low': 0.40439766454017567, 'Close': 0.3670355396503645, 'High': 0.1308555658954431, 'Open': 0.07716846737930555, 'SMA20': 0.005593126397982812, 'Volume': 0.005373654093015282, 'MACD_Signal': 0.003610406978488134, 'RSI': 0.0031138370910065187, 'MACD': 0.0028517379742184004, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:05,221 - main - INFO - Training model for DIA
+2025-04-06 14:42:05,221 - model - INFO - Training model for DIA
+2025-04-06 14:42:05,221 - historical_data_import - INFO - Retrieving historical data for DIA from 2024-04-06 14:42:05.221589 to 2025-04-06 14:42:05.221589
+2025-04-06 14:42:05,259 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 14:42:05,259 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 14:42:05,304 - historical_data_import - INFO - Successfully retrieved 250 bars for DIA from Alpaca
+2025-04-06 14:42:05,304 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 14:42:05,304 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 14:42:05,304 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 14:42:05,304 - historical_data_import - INFO - Successfully retrieved data for DIA from _get_alpaca_data
+2025-04-06 14:42:05,322 - historical_data_import - INFO - Saved 250 rows of DIA data to cache
+2025-04-06 14:42:05,345 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 14:42:06,178 - model - INFO - Cross-validation RMSE for DIA - RF: 9.1108, XGB: 10.6801, Ensemble: 9.7842
+2025-04-06 14:42:06,178 - model - INFO - Training final models for DIA on all data
+2025-04-06 14:42:06,461 - model - INFO - Models and metrics saved for DIA
+2025-04-06 14:42:06,461 - model - INFO - Successfully trained and saved model for DIA
+2025-04-06 14:42:06,480 - model - INFO - Feature importance for DIA: {'Close': 0.43444907919785014, 'High': 0.2573129642161497, 'Low': 0.16203395227046957, 'SMA20': 0.06981180380579195, 'Open': 0.061428846604637904, 'RSI': 0.0049976235459805755, 'Volume': 0.0035742954373044382, 'MACD': 0.003196511027192674, 'MACD_Signal': 0.0031949238946230147, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:06,480 - main - INFO - Successfully trained model for DIA
+2025-04-06 14:42:06,481 - main - INFO - Analyzing feature importance for DIA
+2025-04-06 14:42:06,492 - model - INFO - Feature importance for DIA: {'Close': 0.43444907919785014, 'High': 0.2573129642161497, 'Low': 0.16203395227046957, 'SMA20': 0.06981180380579195, 'Open': 0.061428846604637904, 'RSI': 0.0049976235459805755, 'Volume': 0.0035742954373044382, 'MACD': 0.003196511027192674, 'MACD_Signal': 0.0031949238946230147, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 14:42:07,528 - main - INFO - Successfully initialized train_basic_models in 25.99s
+2025-04-06 14:42:07,528 - main - INFO - Stage 5/8: System Integration
+2025-04-06 14:42:07,528 - main - INFO - Initializing init_integration
+2025-04-06 14:42:07,574 - model - INFO - Loaded models for NVDA
+2025-04-06 14:42:07,625 - model - INFO - Loaded models for AAPL
+2025-04-06 14:42:07,662 - model - INFO - Loaded models for AMD
+2025-04-06 14:42:07,705 - model - INFO - Loaded models for TSLA
+2025-04-06 14:42:07,746 - model - INFO - Loaded models for META
+2025-04-06 14:42:07,781 - model - INFO - Loaded models for AMZN
+2025-04-06 14:42:07,824 - model - INFO - Loaded models for MSFT
+2025-04-06 14:42:07,862 - model - INFO - Loaded models for GOOGL
+2025-04-06 14:42:07,912 - model - INFO - Loaded models for QQQ
+2025-04-06 14:42:07,958 - model - INFO - Loaded models for DIA
+2025-04-06 14:42:08,009 - model - INFO - Loaded models for SPY
+2025-04-06 14:42:08,009 - model - INFO - StockAnalysisModel initialized
+2025-04-06 14:42:08,009 - system_integration - INFO - Applying advanced ingestion enhancements
+2025-04-06 14:42:09,291 - system_integration - ERROR - Error patching ingestion functions: name '_C' is not defined
+2025-04-06 14:42:09,291 - main - INFO - Successfully initialized init_integration in 1.76s
+2025-04-06 14:42:09,291 - main - INFO - Stage 6/8: UI Initialization
+2025-04-06 14:42:09,291 - main - INFO - Initializing init_ui
+2025-04-06 14:42:09,419 - model - INFO - Loaded models for NVDA
+2025-04-06 14:42:09,445 - model - INFO - Loaded models for AAPL
+2025-04-06 14:42:09,475 - model - INFO - Loaded models for AMD
+2025-04-06 14:42:09,497 - model - INFO - Loaded models for TSLA
+2025-04-06 14:42:09,530 - model - INFO - Loaded models for META
+2025-04-06 14:42:09,557 - model - INFO - Loaded models for AMZN
+2025-04-06 14:42:09,582 - model - INFO - Loaded models for MSFT
+2025-04-06 14:42:09,612 - model - INFO - Loaded models for GOOGL
+2025-04-06 14:42:09,632 - model - INFO - Loaded models for QQQ
+2025-04-06 14:42:09,659 - model - INFO - Loaded models for DIA
+2025-04-06 14:42:09,680 - model - INFO - Loaded models for SPY
+2025-04-06 14:42:09,680 - model - INFO - StockAnalysisModel initialized
+2025-04-06 14:42:09,680 - ui - INFO - StockAnalysisModel loaded successfully
+2025-04-06 14:42:14,088 - main - ERROR - Error initializing UI: name '_C' is not defined
+2025-04-06 14:42:14,088 - main - ERROR - Traceback (most recent call last):
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\main.py", line 333, in init_ui
+    from ui import app, socketio
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ui.py", line 88, in <module>
+    check_component_availability()
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ui.py", line 64, in check_component_availability
+    from enhanced_topic_modeling import TOPIC_MODELER
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\enhanced_topic_modeling.py", line 13, in <module>
+    import bertopic
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\__init__.py", line 1, in <module>
+    from bertopic._bertopic import BERTopic
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\_bertopic.py", line 48, in <module>
+    from bertopic.backend import BaseEmbedder
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\backend\__init__.py", line 22, in <module>
+    from bertopic.backend._multimodal import MultiModalBackend
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\backend\_multimodal.py", line 6, in <module>
+    from sentence_transformers import SentenceTransformer
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sentence_transformers\__init__.py", line 3, in <module>
+    from .datasets import SentencesDataset, ParallelSentencesDataset
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sentence_transformers\datasets\__init__.py", line 1, in <module>
+    from .DenoisingAutoEncoderDataset import DenoisingAutoEncoderDataset
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sentence_transformers\datasets\DenoisingAutoEncoderDataset.py", line 1, in <module>
+    from torch.utils.data import Dataset
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\__init__.py", line 229, in <module>
+    __all__ += [name for name in dir(_C)
+NameError: name '_C' is not defined
+
+2025-04-06 14:42:14,088 - main - INFO - Successfully initialized init_ui in 4.80s
+2025-04-06 14:42:14,088 - main - INFO - Stage 7/8: NLP Components
+2025-04-06 14:42:14,088 - main - INFO - Initializing init_nlp_models
+2025-04-06 14:42:14,111 - main - ERROR - Error initializing NLP models: name '_C' is not defined
+2025-04-06 14:42:14,111 - main - ERROR - Traceback (most recent call last):
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\main.py", line 362, in init_nlp_models
+    from ingestion import load_robust_nlp_models
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ingestion.py", line 13, in <module>
+    from transformers import pipeline
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\__init__.py", line 25, in <module>
+    from .chat_template_utils import DocstringParsingException, TypeHintParsingException, get_json_schema
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\chat_template_utils.py", line 40, in <module>
+    from torch import Tensor
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\__init__.py", line 229, in <module>
+    __all__ += [name for name in dir(_C)
+NameError: name '_C' is not defined
+
+2025-04-06 14:42:14,111 - main - INFO - Successfully initialized init_nlp_models in 0.02s
+2025-04-06 14:42:14,111 - main - INFO - Stage 8/8: Data Collection
+2025-04-06 14:42:14,111 - main - INFO - Initializing init_data_collection
+2025-04-06 14:42:14,121 - main - ERROR - Error initializing data collection: name '_C' is not defined
+2025-04-06 14:42:14,121 - main - ERROR - Traceback (most recent call last):
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\main.py", line 372, in init_data_collection
+    from ingestion import initialize_reddit_client
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ingestion.py", line 13, in <module>
+    from transformers import pipeline
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\__init__.py", line 25, in <module>
+    from .chat_template_utils import DocstringParsingException, TypeHintParsingException, get_json_schema
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\chat_template_utils.py", line 40, in <module>
+    from torch import Tensor
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\__init__.py", line 229, in <module>
+    __all__ += [name for name in dir(_C)
+NameError: name '_C' is not defined
+
+2025-04-06 14:42:14,125 - main - INFO - Successfully initialized init_data_collection in 0.01s
+2025-04-06 14:42:14,232 - main - INFO - System Memory: Total: 32212.70 MB, Available: 15727.80 MB, Used: 51.2%
+2025-04-06 14:42:14,232 - main - INFO - CPU Usage: 23.6%
+2025-04-06 14:42:14,233 - main - INFO - Current Process Memory: 435.70 MB
+2025-04-06 14:42:14,233 - main - INFO - UI app initialized: False
+2025-04-06 14:42:14,233 - main - INFO - UI socketio initialized: False
+2025-04-06 14:42:14,233 - main - INFO - Model class initialized: True
+2025-04-06 14:42:14,234 - main - INFO - Integration module initialized: True
+2025-04-06 14:42:14,234 - main - INFO - Starting system initialization process...
+2025-04-06 14:42:14,239 - main - INFO - System Memory: Total: 32212.70 MB, Available: 15728.17 MB, Used: 51.2%
+2025-04-06 14:42:14,239 - main - INFO - CPU Usage: 0.0%
+2025-04-06 14:42:14,239 - main - INFO - Current Process Memory: 435.68 MB
+2025-04-06 14:42:14,239 - main - CRITICAL - Failed to initialize web server
+2025-04-06 19:25:01,474 - main - INFO - Running database maintenance
+2025-04-06 19:25:01,474 - main - INFO - ==================================================
+2025-04-06 19:25:01,474 - main - INFO - TRADING PLATFORM INITIALIZATION
+2025-04-06 19:25:01,474 - main - INFO - ==================================================
+2025-04-06 19:25:01,474 - main - INFO - Python Version: 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]
+2025-04-06 19:25:01,474 - main - INFO - Working Directory: C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform
+2025-04-06 19:25:01,474 - main - INFO - Platform: win32
+2025-04-06 19:25:01,474 - main - INFO - System Memory: Total: 32212.70 MB, Available: 14535.24 MB, Used: 54.9%
+2025-04-06 19:25:01,474 - main - INFO - CPU Usage: 0.0%
+2025-04-06 19:25:01,474 - main - INFO - Current Process Memory: 23.26 MB
+2025-04-06 19:25:01,474 - main - INFO - Starting SystemInitializer...
+2025-04-06 19:25:01,474 - main - INFO - Starting sequential initialization (8 stages)
+2025-04-06 19:25:01,474 - main - INFO - Stage 1/8: Database Initialization
+2025-04-06 19:25:01,484 - main - INFO - Initializing init_database
+2025-04-06 19:25:02,086 - database - INFO - Running database maintenance
+2025-04-06 19:25:02,086 - database - INFO - Started background maintenance thread
+2025-04-06 19:25:02,090 - database - ERROR - Error pruning old data: no such table: raw_data
+2025-04-06 19:25:02,091 - database - INFO - Database backup created at backups\trading_backup_20250406192502.db
+2025-04-06 19:25:02,097 - database - INFO - Database initialized successfully.
+2025-04-06 19:25:02,097 - main - INFO - Successfully initialized init_database in 0.61s
+2025-04-06 19:25:02,097 - main - INFO - Stage 2/8: Historical Data Import
+2025-04-06 19:25:02,097 - main - INFO - Initializing init_historical_data
+2025-04-06 19:25:02,102 - database - INFO - Database optimization completed successfully
+2025-04-06 19:25:02,102 - database - INFO - Database maintenance completed successfully
+2025-04-06 19:25:02,119 - database - INFO - Database optimization completed successfully
+2025-04-06 19:25:02,518 - main - INFO - Importing historical data for NVDA
+2025-04-06 19:25:02,518 - historical_data_import - INFO - Retrieving historical data for NVDA from 2024-04-06 19:25:02.518525 to 2025-04-06 19:25:02.518525
+2025-04-06 19:25:02,545 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:02,545 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:02,607 - historical_data_import - INFO - Successfully retrieved 250 bars for NVDA from Alpaca
+2025-04-06 19:25:02,608 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:02,608 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:02,608 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:02,612 - historical_data_import - INFO - Successfully retrieved data for NVDA from _get_alpaca_data
+2025-04-06 19:25:02,617 - historical_data_import - INFO - Saved 250 rows of NVDA data to cache
+2025-04-06 19:25:02,617 - main - INFO - Successfully imported historical data for NVDA
+2025-04-06 19:25:03,627 - main - INFO - Importing historical data for AAPL
+2025-04-06 19:25:03,627 - historical_data_import - INFO - Retrieving historical data for AAPL from 2024-04-06 19:25:03.627294 to 2025-04-06 19:25:03.627294
+2025-04-06 19:25:03,671 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:03,671 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:03,715 - historical_data_import - INFO - Successfully retrieved 250 bars for AAPL from Alpaca
+2025-04-06 19:25:03,716 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:03,717 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:03,717 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:03,718 - historical_data_import - INFO - Successfully retrieved data for AAPL from _get_alpaca_data
+2025-04-06 19:25:03,721 - historical_data_import - INFO - Saved 250 rows of AAPL data to cache
+2025-04-06 19:25:03,721 - main - INFO - Successfully imported historical data for AAPL
+2025-04-06 19:25:04,726 - main - INFO - Importing historical data for AMD
+2025-04-06 19:25:04,726 - historical_data_import - INFO - Retrieving historical data for AMD from 2024-04-06 19:25:04.726164 to 2025-04-06 19:25:04.726164
+2025-04-06 19:25:04,767 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:04,767 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:04,818 - historical_data_import - INFO - Successfully retrieved 250 bars for AMD from Alpaca
+2025-04-06 19:25:04,819 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:04,819 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:04,819 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:04,821 - historical_data_import - INFO - Successfully retrieved data for AMD from _get_alpaca_data
+2025-04-06 19:25:04,823 - historical_data_import - INFO - Saved 250 rows of AMD data to cache
+2025-04-06 19:25:04,824 - main - INFO - Successfully imported historical data for AMD
+2025-04-06 19:25:05,847 - main - INFO - Importing historical data for TSLA
+2025-04-06 19:25:05,847 - historical_data_import - INFO - Retrieving historical data for TSLA from 2024-04-06 19:25:05.847781 to 2025-04-06 19:25:05.847781
+2025-04-06 19:25:05,876 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:05,877 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:05,927 - historical_data_import - INFO - Successfully retrieved 250 bars for TSLA from Alpaca
+2025-04-06 19:25:05,928 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:05,929 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:05,929 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:05,931 - historical_data_import - INFO - Successfully retrieved data for TSLA from _get_alpaca_data
+2025-04-06 19:25:05,933 - historical_data_import - INFO - Saved 250 rows of TSLA data to cache
+2025-04-06 19:25:05,934 - main - INFO - Successfully imported historical data for TSLA
+2025-04-06 19:25:06,964 - main - INFO - Importing historical data for META
+2025-04-06 19:25:06,964 - historical_data_import - INFO - Retrieving historical data for META from 2024-04-06 19:25:06.964388 to 2025-04-06 19:25:06.964388
+2025-04-06 19:25:07,021 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:07,022 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:07,083 - historical_data_import - INFO - Successfully retrieved 250 bars for META from Alpaca
+2025-04-06 19:25:07,085 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:07,085 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:07,085 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:07,088 - historical_data_import - INFO - Successfully retrieved data for META from _get_alpaca_data
+2025-04-06 19:25:07,090 - historical_data_import - INFO - Saved 250 rows of META data to cache
+2025-04-06 19:25:07,091 - main - INFO - Successfully imported historical data for META
+2025-04-06 19:25:08,106 - main - INFO - Importing historical data for GOOGL
+2025-04-06 19:25:08,107 - historical_data_import - INFO - Retrieving historical data for GOOGL from 2024-04-06 19:25:08.107994 to 2025-04-06 19:25:08.107994
+2025-04-06 19:25:08,138 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:08,138 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:08,187 - historical_data_import - INFO - Successfully retrieved 250 bars for GOOGL from Alpaca
+2025-04-06 19:25:08,188 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:08,188 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:08,188 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:08,190 - historical_data_import - INFO - Successfully retrieved data for GOOGL from _get_alpaca_data
+2025-04-06 19:25:08,193 - historical_data_import - INFO - Saved 250 rows of GOOGL data to cache
+2025-04-06 19:25:08,193 - main - INFO - Successfully imported historical data for GOOGL
+2025-04-06 19:25:09,213 - main - INFO - Importing historical data for AMZN
+2025-04-06 19:25:09,213 - historical_data_import - INFO - Retrieving historical data for AMZN from 2024-04-06 19:25:09.213949 to 2025-04-06 19:25:09.213949
+2025-04-06 19:25:09,240 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:09,241 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:09,285 - historical_data_import - INFO - Successfully retrieved 250 bars for AMZN from Alpaca
+2025-04-06 19:25:09,287 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:09,287 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:09,287 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:09,289 - historical_data_import - INFO - Successfully retrieved data for AMZN from _get_alpaca_data
+2025-04-06 19:25:09,291 - historical_data_import - INFO - Saved 250 rows of AMZN data to cache
+2025-04-06 19:25:09,291 - main - INFO - Successfully imported historical data for AMZN
+2025-04-06 19:25:10,319 - main - INFO - Importing historical data for MSFT
+2025-04-06 19:25:10,319 - historical_data_import - INFO - Retrieving historical data for MSFT from 2024-04-06 19:25:10.319494 to 2025-04-06 19:25:10.319494
+2025-04-06 19:25:10,349 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:10,350 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:10,398 - historical_data_import - INFO - Successfully retrieved 250 bars for MSFT from Alpaca
+2025-04-06 19:25:10,399 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:10,399 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:10,399 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:10,401 - historical_data_import - INFO - Successfully retrieved data for MSFT from _get_alpaca_data
+2025-04-06 19:25:10,403 - historical_data_import - INFO - Saved 250 rows of MSFT data to cache
+2025-04-06 19:25:10,403 - main - INFO - Successfully imported historical data for MSFT
+2025-04-06 19:25:11,434 - main - INFO - Importing historical data for QQQ
+2025-04-06 19:25:11,434 - historical_data_import - INFO - Retrieving historical data for QQQ from 2024-04-06 19:25:11.434254 to 2025-04-06 19:25:11.434254
+2025-04-06 19:25:11,467 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:11,468 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:11,517 - historical_data_import - INFO - Successfully retrieved 250 bars for QQQ from Alpaca
+2025-04-06 19:25:11,518 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:11,519 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:11,519 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:11,521 - historical_data_import - INFO - Successfully retrieved data for QQQ from _get_alpaca_data
+2025-04-06 19:25:11,523 - historical_data_import - INFO - Saved 250 rows of QQQ data to cache
+2025-04-06 19:25:11,524 - main - INFO - Successfully imported historical data for QQQ
+2025-04-06 19:25:12,552 - main - INFO - Importing historical data for SPY
+2025-04-06 19:25:12,553 - historical_data_import - INFO - Retrieving historical data for SPY from 2024-04-06 19:25:12.553964 to 2025-04-06 19:25:12.553964
+2025-04-06 19:25:12,589 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:12,590 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:12,658 - historical_data_import - INFO - Successfully retrieved 250 bars for SPY from Alpaca
+2025-04-06 19:25:12,659 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:12,660 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:12,660 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:12,662 - historical_data_import - INFO - Successfully retrieved data for SPY from _get_alpaca_data
+2025-04-06 19:25:12,667 - historical_data_import - INFO - Saved 250 rows of SPY data to cache
+2025-04-06 19:25:12,667 - main - INFO - Successfully imported historical data for SPY
+2025-04-06 19:25:13,702 - main - INFO - Importing historical data for DIA
+2025-04-06 19:25:13,703 - historical_data_import - INFO - Retrieving historical data for DIA from 2024-04-06 19:25:13.703429 to 2025-04-06 19:25:13.703429
+2025-04-06 19:25:13,736 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:13,737 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:13,795 - historical_data_import - INFO - Successfully retrieved 250 bars for DIA from Alpaca
+2025-04-06 19:25:13,796 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:13,796 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:13,797 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:13,802 - historical_data_import - INFO - Successfully retrieved data for DIA from _get_alpaca_data
+2025-04-06 19:25:13,806 - historical_data_import - INFO - Saved 250 rows of DIA data to cache
+2025-04-06 19:25:13,806 - main - INFO - Successfully imported historical data for DIA
+2025-04-06 19:25:14,845 - main - INFO - Successfully initialized init_historical_data in 12.75s
+2025-04-06 19:25:14,846 - main - INFO - Stage 3/8: Model Initialization
+2025-04-06 19:25:14,846 - main - INFO - Initializing init_model
+2025-04-06 19:25:16,346 - model - INFO - StockAnalysisModel initialized
+2025-04-06 19:25:16,347 - main - INFO - StockAnalysisModel initialized successfully with required methods
+2025-04-06 19:25:16,347 - main - INFO - Successfully initialized init_model in 1.50s
+2025-04-06 19:25:16,348 - main - INFO - Stage 4/8: Model Training
+2025-04-06 19:25:16,348 - main - INFO - Initializing train_basic_models
+2025-04-06 19:25:16,349 - main - WARNING - Model is None, attempting to create a new instance directly
+2025-04-06 19:25:16,349 - main - INFO - Reloading model module
+2025-04-06 19:25:16,352 - model - INFO - StockAnalysisModel initialized
+2025-04-06 19:25:16,353 - main - INFO - Successfully created a fresh StockAnalysisModel instance
+2025-04-06 19:25:16,353 - main - INFO - Training model for NVDA
+2025-04-06 19:25:16,353 - model - INFO - Training model for NVDA
+2025-04-06 19:25:16,354 - historical_data_import - INFO - Retrieving historical data for NVDA from 2024-04-06 19:25:16.354097 to 2025-04-06 19:25:16.354097
+2025-04-06 19:25:16,387 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:16,388 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:16,454 - historical_data_import - INFO - Successfully retrieved 250 bars for NVDA from Alpaca
+2025-04-06 19:25:16,455 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:16,456 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:16,456 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:16,460 - historical_data_import - INFO - Successfully retrieved data for NVDA from _get_alpaca_data
+2025-04-06 19:25:16,465 - historical_data_import - INFO - Saved 250 rows of NVDA data to cache
+2025-04-06 19:25:16,531 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:17,999 - model - INFO - Cross-validation RMSE for NVDA - RF: 168.7058, XGB: 143.6088, Ensemble: 153.7641
+2025-04-06 19:25:18,000 - model - INFO - Training final models for NVDA on all data
+2025-04-06 19:25:18,398 - model - INFO - Models and metrics saved for NVDA
+2025-04-06 19:25:18,398 - model - INFO - Successfully trained and saved model for NVDA
+2025-04-06 19:25:18,426 - model - INFO - Feature importance for NVDA: {'Volume': 0.41839148709292995, 'Close': 0.2112376121361715, 'High': 0.1477004113457064, 'Low': 0.09726250091283646, 'Open': 0.09012650466104162, 'MACD_Signal': 0.01260451806862773, 'SMA20': 0.01061817132510274, 'MACD': 0.008141459817591847, 'RSI': 0.003917334639991708, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:18,427 - main - INFO - Successfully trained model for NVDA
+2025-04-06 19:25:18,427 - main - INFO - Analyzing feature importance for NVDA
+2025-04-06 19:25:18,444 - model - INFO - Feature importance for NVDA: {'Volume': 0.41839148709292995, 'Close': 0.2112376121361715, 'High': 0.1477004113457064, 'Low': 0.09726250091283646, 'Open': 0.09012650466104162, 'MACD_Signal': 0.01260451806862773, 'SMA20': 0.01061817132510274, 'MACD': 0.008141459817591847, 'RSI': 0.003917334639991708, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:19,494 - main - INFO - Training model for AAPL
+2025-04-06 19:25:19,495 - model - INFO - Training model for AAPL
+2025-04-06 19:25:19,495 - historical_data_import - INFO - Retrieving historical data for AAPL from 2024-04-06 19:25:19.495366 to 2025-04-06 19:25:19.495366
+2025-04-06 19:25:19,532 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:19,533 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:19,584 - historical_data_import - INFO - Successfully retrieved 250 bars for AAPL from Alpaca
+2025-04-06 19:25:19,586 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:19,587 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:19,587 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:19,591 - historical_data_import - INFO - Successfully retrieved data for AAPL from _get_alpaca_data
+2025-04-06 19:25:19,595 - historical_data_import - INFO - Saved 250 rows of AAPL data to cache
+2025-04-06 19:25:19,645 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:20,932 - model - INFO - Cross-validation RMSE for AAPL - RF: 10.4401, XGB: 11.1511, Ensemble: 10.6920
+2025-04-06 19:25:20,933 - model - INFO - Training final models for AAPL on all data
+2025-04-06 19:25:21,312 - model - INFO - Models and metrics saved for AAPL
+2025-04-06 19:25:21,313 - model - INFO - Successfully trained and saved model for AAPL
+2025-04-06 19:25:21,333 - model - INFO - Feature importance for AAPL: {'Close': 0.5702380762242982, 'High': 0.18803427405558817, 'SMA20': 0.11594815997547123, 'Low': 0.07896130785683031, 'Open': 0.023227076830577262, 'MACD': 0.007870561365374578, 'RSI': 0.00719275923541753, 'Volume': 0.004464794275641536, 'MACD_Signal': 0.004062990180801189, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:21,335 - main - INFO - Successfully trained model for AAPL
+2025-04-06 19:25:21,335 - main - INFO - Analyzing feature importance for AAPL
+2025-04-06 19:25:21,343 - model - INFO - Feature importance for AAPL: {'Close': 0.5702380762242982, 'High': 0.18803427405558817, 'SMA20': 0.11594815997547123, 'Low': 0.07896130785683031, 'Open': 0.023227076830577262, 'MACD': 0.007870561365374578, 'RSI': 0.00719275923541753, 'Volume': 0.004464794275641536, 'MACD_Signal': 0.004062990180801189, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:22,394 - main - INFO - Training model for AMD
+2025-04-06 19:25:22,395 - model - INFO - Training model for AMD
+2025-04-06 19:25:22,396 - historical_data_import - INFO - Retrieving historical data for AMD from 2024-04-06 19:25:22.396043 to 2025-04-06 19:25:22.396043
+2025-04-06 19:25:22,425 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:22,426 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:22,483 - historical_data_import - INFO - Successfully retrieved 250 bars for AMD from Alpaca
+2025-04-06 19:25:22,485 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:22,486 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:22,486 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:22,489 - historical_data_import - INFO - Successfully retrieved data for AMD from _get_alpaca_data
+2025-04-06 19:25:22,492 - historical_data_import - INFO - Saved 250 rows of AMD data to cache
+2025-04-06 19:25:22,541 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:23,840 - model - INFO - Cross-validation RMSE for AMD - RF: 10.2348, XGB: 10.1618, Ensemble: 10.0913
+2025-04-06 19:25:23,841 - model - INFO - Training final models for AMD on all data
+2025-04-06 19:25:24,313 - model - INFO - Models and metrics saved for AMD
+2025-04-06 19:25:24,314 - model - INFO - Successfully trained and saved model for AMD
+2025-04-06 19:25:24,337 - model - INFO - Feature importance for AMD: {'Low': 0.5323078401173637, 'Close': 0.21785132316717348, 'SMA20': 0.0988393306321999, 'Open': 0.09021437113393055, 'High': 0.046551717873247314, 'MACD_Signal': 0.004408941610073126, 'RSI': 0.0035746845907332677, 'Volume': 0.003546081107922547, 'MACD': 0.0027057097673563093, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:24,338 - main - INFO - Successfully trained model for AMD
+2025-04-06 19:25:24,338 - main - INFO - Analyzing feature importance for AMD
+2025-04-06 19:25:24,351 - model - INFO - Feature importance for AMD: {'Low': 0.5323078401173637, 'Close': 0.21785132316717348, 'SMA20': 0.0988393306321999, 'Open': 0.09021437113393055, 'High': 0.046551717873247314, 'MACD_Signal': 0.004408941610073126, 'RSI': 0.0035746845907332677, 'Volume': 0.003546081107922547, 'MACD': 0.0027057097673563093, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:25,398 - main - INFO - Training model for TSLA
+2025-04-06 19:25:25,399 - model - INFO - Training model for TSLA
+2025-04-06 19:25:25,399 - historical_data_import - INFO - Retrieving historical data for TSLA from 2024-04-06 19:25:25.399808 to 2025-04-06 19:25:25.399808
+2025-04-06 19:25:25,430 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:25,431 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:25,483 - historical_data_import - INFO - Successfully retrieved 250 bars for TSLA from Alpaca
+2025-04-06 19:25:25,485 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:25,485 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:25,486 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:25,489 - historical_data_import - INFO - Successfully retrieved data for TSLA from _get_alpaca_data
+2025-04-06 19:25:25,492 - historical_data_import - INFO - Saved 250 rows of TSLA data to cache
+2025-04-06 19:25:25,551 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:26,776 - model - INFO - Cross-validation RMSE for TSLA - RF: 44.4481, XGB: 48.4151, Ensemble: 46.1659
+2025-04-06 19:25:26,777 - model - INFO - Training final models for TSLA on all data
+2025-04-06 19:25:27,113 - model - INFO - Models and metrics saved for TSLA
+2025-04-06 19:25:27,113 - model - INFO - Successfully trained and saved model for TSLA
+2025-04-06 19:25:27,130 - model - INFO - Feature importance for TSLA: {'Close': 0.5990010511805648, 'Low': 0.24688151598963895, 'High': 0.1014523969878407, 'Open': 0.031581001396387455, 'MACD': 0.008313999508691087, 'SMA20': 0.005946761464508268, 'RSI': 0.0024907945323770354, 'Volume': 0.0021701763339734416, 'MACD_Signal': 0.002162302606018401, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:27,131 - main - INFO - Successfully trained model for TSLA
+2025-04-06 19:25:27,131 - main - INFO - Analyzing feature importance for TSLA
+2025-04-06 19:25:27,140 - model - INFO - Feature importance for TSLA: {'Close': 0.5990010511805648, 'Low': 0.24688151598963895, 'High': 0.1014523969878407, 'Open': 0.031581001396387455, 'MACD': 0.008313999508691087, 'SMA20': 0.005946761464508268, 'RSI': 0.0024907945323770354, 'Volume': 0.0021701763339734416, 'MACD_Signal': 0.002162302606018401, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:28,180 - main - INFO - Training model for META
+2025-04-06 19:25:28,180 - model - INFO - Training model for META
+2025-04-06 19:25:28,181 - historical_data_import - INFO - Retrieving historical data for META from 2024-04-06 19:25:28.180071 to 2025-04-06 19:25:28.180071
+2025-04-06 19:25:28,210 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:28,211 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:28,278 - historical_data_import - INFO - Successfully retrieved 250 bars for META from Alpaca
+2025-04-06 19:25:28,280 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:28,280 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:28,280 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:28,284 - historical_data_import - INFO - Successfully retrieved data for META from _get_alpaca_data
+2025-04-06 19:25:28,290 - historical_data_import - INFO - Saved 250 rows of META data to cache
+2025-04-06 19:25:28,332 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:29,446 - model - INFO - Cross-validation RMSE for META - RF: 26.9669, XGB: 31.0746, Ensemble: 28.4516
+2025-04-06 19:25:29,447 - model - INFO - Training final models for META on all data
+2025-04-06 19:25:29,778 - model - INFO - Models and metrics saved for META
+2025-04-06 19:25:29,779 - model - INFO - Successfully trained and saved model for META
+2025-04-06 19:25:29,796 - model - INFO - Feature importance for META: {'Close': 0.4484932520033279, 'Low': 0.37475224708564914, 'High': 0.11250458091202191, 'Open': 0.04428871180319286, 'MACD': 0.007326977748452633, 'Volume': 0.0039356606667443625, 'MACD_Signal': 0.0037044373286262617, 'RSI': 0.002995901828331865, 'SMA20': 0.0019982306236530447, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:29,797 - main - INFO - Successfully trained model for META
+2025-04-06 19:25:29,797 - main - INFO - Analyzing feature importance for META
+2025-04-06 19:25:29,806 - model - INFO - Feature importance for META: {'Close': 0.4484932520033279, 'Low': 0.37475224708564914, 'High': 0.11250458091202191, 'Open': 0.04428871180319286, 'MACD': 0.007326977748452633, 'Volume': 0.0039356606667443625, 'MACD_Signal': 0.0037044373286262617, 'RSI': 0.002995901828331865, 'SMA20': 0.0019982306236530447, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:30,857 - main - INFO - Training model for GOOGL
+2025-04-06 19:25:30,857 - model - INFO - Training model for GOOGL
+2025-04-06 19:25:30,858 - historical_data_import - INFO - Retrieving historical data for GOOGL from 2024-04-06 19:25:30.857973 to 2025-04-06 19:25:30.857973
+2025-04-06 19:25:30,897 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:30,899 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:31,036 - historical_data_import - INFO - Successfully retrieved 250 bars for GOOGL from Alpaca
+2025-04-06 19:25:31,038 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:31,039 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:31,040 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:31,043 - historical_data_import - INFO - Successfully retrieved data for GOOGL from _get_alpaca_data
+2025-04-06 19:25:31,049 - historical_data_import - INFO - Saved 250 rows of GOOGL data to cache
+2025-04-06 19:25:31,093 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:32,712 - model - INFO - Cross-validation RMSE for GOOGL - RF: 5.8586, XGB: 7.0073, Ensemble: 6.3069
+2025-04-06 19:25:32,713 - model - INFO - Training final models for GOOGL on all data
+2025-04-06 19:25:33,215 - model - INFO - Models and metrics saved for GOOGL
+2025-04-06 19:25:33,217 - model - INFO - Successfully trained and saved model for GOOGL
+2025-04-06 19:25:33,241 - model - INFO - Feature importance for GOOGL: {'Close': 0.49470102778714947, 'Low': 0.33467833954885173, 'High': 0.11795211737949143, 'Open': 0.014113722912052191, 'Volume': 0.009553900420867395, 'MACD_Signal': 0.009012779336604142, 'RSI': 0.008458394969493301, 'SMA20': 0.005816358482696063, 'MACD': 0.005713359162794387, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:33,242 - main - INFO - Successfully trained model for GOOGL
+2025-04-06 19:25:33,242 - main - INFO - Analyzing feature importance for GOOGL
+2025-04-06 19:25:33,262 - model - INFO - Feature importance for GOOGL: {'Close': 0.49470102778714947, 'Low': 0.33467833954885173, 'High': 0.11795211737949143, 'Open': 0.014113722912052191, 'Volume': 0.009553900420867395, 'MACD_Signal': 0.009012779336604142, 'RSI': 0.008458394969493301, 'SMA20': 0.005816358482696063, 'MACD': 0.005713359162794387, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:34,309 - main - INFO - Training model for AMZN
+2025-04-06 19:25:34,310 - model - INFO - Training model for AMZN
+2025-04-06 19:25:34,310 - historical_data_import - INFO - Retrieving historical data for AMZN from 2024-04-06 19:25:34.310309 to 2025-04-06 19:25:34.310309
+2025-04-06 19:25:34,341 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:34,342 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:34,393 - historical_data_import - INFO - Successfully retrieved 250 bars for AMZN from Alpaca
+2025-04-06 19:25:34,396 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:34,396 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:34,396 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:34,398 - historical_data_import - INFO - Successfully retrieved data for AMZN from _get_alpaca_data
+2025-04-06 19:25:34,403 - historical_data_import - INFO - Saved 250 rows of AMZN data to cache
+2025-04-06 19:25:34,445 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:35,695 - model - INFO - Cross-validation RMSE for AMZN - RF: 8.6071, XGB: 9.8111, Ensemble: 9.0876
+2025-04-06 19:25:35,696 - model - INFO - Training final models for AMZN on all data
+2025-04-06 19:25:36,037 - model - INFO - Models and metrics saved for AMZN
+2025-04-06 19:25:36,037 - model - INFO - Successfully trained and saved model for AMZN
+2025-04-06 19:25:36,054 - model - INFO - Feature importance for AMZN: {'Close': 0.5013783219819645, 'Low': 0.21746331090393212, 'High': 0.21173051664291423, 'Open': 0.04701323490605545, 'MACD_Signal': 0.0066758820620480535, 'MACD': 0.004523188937602605, 'SMA20': 0.004276251947028248, 'Volume': 0.004211610826965666, 'RSI': 0.002727681791489114, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:36,055 - main - INFO - Successfully trained model for AMZN
+2025-04-06 19:25:36,061 - main - INFO - Analyzing feature importance for AMZN
+2025-04-06 19:25:36,078 - model - INFO - Feature importance for AMZN: {'Close': 0.5013783219819645, 'Low': 0.21746331090393212, 'High': 0.21173051664291423, 'Open': 0.04701323490605545, 'MACD_Signal': 0.0066758820620480535, 'MACD': 0.004523188937602605, 'SMA20': 0.004276251947028248, 'Volume': 0.004211610826965666, 'RSI': 0.002727681791489114, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:37,135 - main - INFO - Training model for MSFT
+2025-04-06 19:25:37,136 - model - INFO - Training model for MSFT
+2025-04-06 19:25:37,136 - historical_data_import - INFO - Retrieving historical data for MSFT from 2024-04-06 19:25:37.136802 to 2025-04-06 19:25:37.136802
+2025-04-06 19:25:37,168 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:37,169 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:37,232 - historical_data_import - INFO - Successfully retrieved 250 bars for MSFT from Alpaca
+2025-04-06 19:25:37,233 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:37,234 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:37,234 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:37,237 - historical_data_import - INFO - Successfully retrieved data for MSFT from _get_alpaca_data
+2025-04-06 19:25:37,241 - historical_data_import - INFO - Saved 250 rows of MSFT data to cache
+2025-04-06 19:25:37,289 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:38,460 - model - INFO - Cross-validation RMSE for MSFT - RF: 12.0670, XGB: 13.0898, Ensemble: 12.4165
+2025-04-06 19:25:38,460 - model - INFO - Training final models for MSFT on all data
+2025-04-06 19:25:38,840 - model - INFO - Models and metrics saved for MSFT
+2025-04-06 19:25:38,840 - model - INFO - Successfully trained and saved model for MSFT
+2025-04-06 19:25:38,858 - model - INFO - Feature importance for MSFT: {'Close': 0.7305350602779146, 'Low': 0.1181748283981524, 'High': 0.053333304752490436, 'SMA20': 0.03080072865137105, 'MACD': 0.02147326221156257, 'Volume': 0.013571822576269146, 'RSI': 0.012396558856995879, 'Open': 0.010124750623376757, 'MACD_Signal': 0.009589683651867046, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:38,858 - main - INFO - Successfully trained model for MSFT
+2025-04-06 19:25:38,859 - main - INFO - Analyzing feature importance for MSFT
+2025-04-06 19:25:38,867 - model - INFO - Feature importance for MSFT: {'Close': 0.7305350602779146, 'Low': 0.1181748283981524, 'High': 0.053333304752490436, 'SMA20': 0.03080072865137105, 'MACD': 0.02147326221156257, 'Volume': 0.013571822576269146, 'RSI': 0.012396558856995879, 'Open': 0.010124750623376757, 'MACD_Signal': 0.009589683651867046, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:39,912 - main - INFO - Training model for QQQ
+2025-04-06 19:25:39,912 - model - INFO - Training model for QQQ
+2025-04-06 19:25:39,913 - historical_data_import - INFO - Retrieving historical data for QQQ from 2024-04-06 19:25:39.913224 to 2025-04-06 19:25:39.913224
+2025-04-06 19:25:39,943 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:39,944 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:40,002 - historical_data_import - INFO - Successfully retrieved 250 bars for QQQ from Alpaca
+2025-04-06 19:25:40,004 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:40,005 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:40,005 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:40,009 - historical_data_import - INFO - Successfully retrieved data for QQQ from _get_alpaca_data
+2025-04-06 19:25:40,014 - historical_data_import - INFO - Saved 250 rows of QQQ data to cache
+2025-04-06 19:25:40,063 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:41,089 - model - INFO - Cross-validation RMSE for QQQ - RF: 14.6411, XGB: 16.0066, Ensemble: 15.1874
+2025-04-06 19:25:41,089 - model - INFO - Training final models for QQQ on all data
+2025-04-06 19:25:41,364 - model - INFO - Models and metrics saved for QQQ
+2025-04-06 19:25:41,365 - model - INFO - Successfully trained and saved model for QQQ
+2025-04-06 19:25:41,381 - model - INFO - Feature importance for QQQ: {'Low': 0.6108171137779027, 'Close': 0.2937733656142138, 'High': 0.04107995850519465, 'Open': 0.028323156639324443, 'MACD_Signal': 0.00696890173715597, 'SMA20': 0.006446173727614762, 'Volume': 0.005186877697216163, 'MACD': 0.0039850100013404804, 'RSI': 0.003419442300037101, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:41,382 - main - INFO - Successfully trained model for QQQ
+2025-04-06 19:25:41,389 - main - INFO - Analyzing feature importance for QQQ
+2025-04-06 19:25:41,398 - model - INFO - Feature importance for QQQ: {'Low': 0.6108171137779027, 'Close': 0.2937733656142138, 'High': 0.04107995850519465, 'Open': 0.028323156639324443, 'MACD_Signal': 0.00696890173715597, 'SMA20': 0.006446173727614762, 'Volume': 0.005186877697216163, 'MACD': 0.0039850100013404804, 'RSI': 0.003419442300037101, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:42,448 - main - INFO - Training model for SPY
+2025-04-06 19:25:42,449 - model - INFO - Training model for SPY
+2025-04-06 19:25:42,451 - historical_data_import - INFO - Retrieving historical data for SPY from 2024-04-06 19:25:42.451194 to 2025-04-06 19:25:42.451194
+2025-04-06 19:25:42,486 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:42,487 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:42,546 - historical_data_import - INFO - Successfully retrieved 250 bars for SPY from Alpaca
+2025-04-06 19:25:42,547 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:42,547 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:42,548 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:42,551 - historical_data_import - INFO - Successfully retrieved data for SPY from _get_alpaca_data
+2025-04-06 19:25:42,555 - historical_data_import - INFO - Saved 250 rows of SPY data to cache
+2025-04-06 19:25:42,604 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:44,115 - model - INFO - Cross-validation RMSE for SPY - RF: 13.0006, XGB: 14.7523, Ensemble: 13.7845
+2025-04-06 19:25:44,120 - model - INFO - Training final models for SPY on all data
+2025-04-06 19:25:44,707 - model - INFO - Models and metrics saved for SPY
+2025-04-06 19:25:44,707 - model - INFO - Successfully trained and saved model for SPY
+2025-04-06 19:25:44,733 - model - INFO - Feature importance for SPY: {'Low': 0.40439766454017567, 'Close': 0.3670355396503645, 'High': 0.1308555658954431, 'Open': 0.07716846737930555, 'SMA20': 0.005593126397982812, 'Volume': 0.005373654093015282, 'MACD_Signal': 0.003610406978488134, 'RSI': 0.0031138370910065187, 'MACD': 0.0028517379742184004, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:44,736 - main - INFO - Successfully trained model for SPY
+2025-04-06 19:25:44,737 - main - INFO - Analyzing feature importance for SPY
+2025-04-06 19:25:44,751 - model - INFO - Feature importance for SPY: {'Low': 0.40439766454017567, 'Close': 0.3670355396503645, 'High': 0.1308555658954431, 'Open': 0.07716846737930555, 'SMA20': 0.005593126397982812, 'Volume': 0.005373654093015282, 'MACD_Signal': 0.003610406978488134, 'RSI': 0.0031138370910065187, 'MACD': 0.0028517379742184004, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:45,799 - main - INFO - Training model for DIA
+2025-04-06 19:25:45,799 - model - INFO - Training model for DIA
+2025-04-06 19:25:45,799 - historical_data_import - INFO - Retrieving historical data for DIA from 2024-04-06 19:25:45.799334 to 2025-04-06 19:25:45.799334
+2025-04-06 19:25:45,833 - historical_data_import - INFO - Trying data source #1: _get_alpaca_data
+2025-04-06 19:25:45,833 - historical_data_import - INFO - Modified date range for Alpaca: 2024-04-06 to 2025-04-05
+2025-04-06 19:25:45,893 - historical_data_import - INFO - Successfully retrieved 250 bars for DIA from Alpaca
+2025-04-06 19:25:45,895 - historical_data_import - INFO - Source returned data of type: <class 'pandas.core.frame.DataFrame'>
+2025-04-06 19:25:45,896 - historical_data_import - INFO - Data columns: ['Close', 'High', 'Low', 'trade_count', 'Open', 'Volume', 'vwap']
+2025-04-06 19:25:45,897 - historical_data_import - INFO - Data shape: (250, 7)
+2025-04-06 19:25:45,899 - historical_data_import - INFO - Successfully retrieved data for DIA from _get_alpaca_data
+2025-04-06 19:25:45,905 - historical_data_import - INFO - Saved 250 rows of DIA data to cache
+2025-04-06 19:25:45,953 - model - INFO - Training with features: ['Open', 'High', 'Low', 'Close', 'Volume', 'SMA20', 'RSI', 'MACD', 'MACD_Signal', 'sentiment', 'mention_count']
+2025-04-06 19:25:47,212 - model - INFO - Cross-validation RMSE for DIA - RF: 9.1108, XGB: 10.6801, Ensemble: 9.7842
+2025-04-06 19:25:47,213 - model - INFO - Training final models for DIA on all data
+2025-04-06 19:25:47,526 - model - INFO - Models and metrics saved for DIA
+2025-04-06 19:25:47,527 - model - INFO - Successfully trained and saved model for DIA
+2025-04-06 19:25:47,544 - model - INFO - Feature importance for DIA: {'Close': 0.43444907919785014, 'High': 0.2573129642161497, 'Low': 0.16203395227046957, 'SMA20': 0.06981180380579195, 'Open': 0.061428846604637904, 'RSI': 0.0049976235459805755, 'Volume': 0.0035742954373044382, 'MACD': 0.003196511027192674, 'MACD_Signal': 0.0031949238946230147, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:47,545 - main - INFO - Successfully trained model for DIA
+2025-04-06 19:25:47,552 - main - INFO - Analyzing feature importance for DIA
+2025-04-06 19:25:47,563 - model - INFO - Feature importance for DIA: {'Close': 0.43444907919785014, 'High': 0.2573129642161497, 'Low': 0.16203395227046957, 'SMA20': 0.06981180380579195, 'Open': 0.061428846604637904, 'RSI': 0.0049976235459805755, 'Volume': 0.0035742954373044382, 'MACD': 0.003196511027192674, 'MACD_Signal': 0.0031949238946230147, 'sentiment': 0.0, 'mention_count': 0.0}
+2025-04-06 19:25:48,624 - main - INFO - Successfully initialized train_basic_models in 32.28s
+2025-04-06 19:25:48,625 - main - INFO - Stage 5/8: System Integration
+2025-04-06 19:25:48,625 - main - INFO - Initializing init_integration
+2025-04-06 19:25:48,713 - model - INFO - Loaded models for NVDA
+2025-04-06 19:25:48,861 - model - INFO - Loaded models for AAPL
+2025-04-06 19:25:48,934 - model - INFO - Loaded models for AMD
+2025-04-06 19:25:49,013 - model - INFO - Loaded models for TSLA
+2025-04-06 19:25:49,086 - model - INFO - Loaded models for META
+2025-04-06 19:25:49,147 - model - INFO - Loaded models for AMZN
+2025-04-06 19:25:49,208 - model - INFO - Loaded models for MSFT
+2025-04-06 19:25:49,257 - model - INFO - Loaded models for GOOGL
+2025-04-06 19:25:49,307 - model - INFO - Loaded models for QQQ
+2025-04-06 19:25:49,354 - model - INFO - Loaded models for DIA
+2025-04-06 19:25:49,405 - model - INFO - Loaded models for SPY
+2025-04-06 19:25:49,405 - model - INFO - StockAnalysisModel initialized
+2025-04-06 19:25:49,405 - system_integration - INFO - Applying advanced ingestion enhancements
+2025-04-06 19:25:51,865 - system_integration - ERROR - Error patching ingestion functions: name '_C' is not defined
+2025-04-06 19:25:51,866 - main - INFO - Successfully initialized init_integration in 3.24s
+2025-04-06 19:25:51,867 - main - INFO - Stage 6/8: UI Initialization
+2025-04-06 19:25:51,867 - main - INFO - Initializing init_ui
+2025-04-06 19:25:52,157 - model - INFO - Loaded models for NVDA
+2025-04-06 19:25:52,192 - model - INFO - Loaded models for AAPL
+2025-04-06 19:25:52,230 - model - INFO - Loaded models for AMD
+2025-04-06 19:25:52,267 - model - INFO - Loaded models for TSLA
+2025-04-06 19:25:52,323 - model - INFO - Loaded models for META
+2025-04-06 19:25:52,366 - model - INFO - Loaded models for AMZN
+2025-04-06 19:25:52,400 - model - INFO - Loaded models for MSFT
+2025-04-06 19:25:52,431 - model - INFO - Loaded models for GOOGL
+2025-04-06 19:25:52,465 - model - INFO - Loaded models for QQQ
+2025-04-06 19:25:52,485 - model - INFO - Loaded models for DIA
+2025-04-06 19:25:52,505 - model - INFO - Loaded models for SPY
+2025-04-06 19:25:52,506 - model - INFO - StockAnalysisModel initialized
+2025-04-06 19:25:52,506 - ui - INFO - StockAnalysisModel loaded successfully
+2025-04-06 19:25:59,453 - main - ERROR - Error initializing UI: name '_C' is not defined
+2025-04-06 19:25:59,453 - main - ERROR - Traceback (most recent call last):
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\main.py", line 333, in init_ui
+    from ui import app, socketio
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ui.py", line 88, in <module>
+    check_component_availability()
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ui.py", line 64, in check_component_availability
+    from enhanced_topic_modeling import TOPIC_MODELER
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\enhanced_topic_modeling.py", line 13, in <module>
+    import bertopic
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\__init__.py", line 1, in <module>
+    from bertopic._bertopic import BERTopic
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\_bertopic.py", line 48, in <module>
+    from bertopic.backend import BaseEmbedder
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\backend\__init__.py", line 22, in <module>
+    from bertopic.backend._multimodal import MultiModalBackend
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\bertopic\backend\_multimodal.py", line 6, in <module>
+    from sentence_transformers import SentenceTransformer
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sentence_transformers\__init__.py", line 3, in <module>
+    from .datasets import SentencesDataset, ParallelSentencesDataset
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sentence_transformers\datasets\__init__.py", line 1, in <module>
+    from .DenoisingAutoEncoderDataset import DenoisingAutoEncoderDataset
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\sentence_transformers\datasets\DenoisingAutoEncoderDataset.py", line 1, in <module>
+    from torch.utils.data import Dataset
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\__init__.py", line 229, in <module>
+    __all__ += [name for name in dir(_C)
+NameError: name '_C' is not defined
+
+2025-04-06 19:25:59,453 - main - INFO - Successfully initialized init_ui in 7.59s
+2025-04-06 19:25:59,453 - main - INFO - Stage 7/8: NLP Components
+2025-04-06 19:25:59,467 - main - INFO - Initializing init_nlp_models
+2025-04-06 19:25:59,479 - main - ERROR - Error initializing NLP models: name '_C' is not defined
+2025-04-06 19:25:59,482 - main - ERROR - Traceback (most recent call last):
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\main.py", line 362, in init_nlp_models
+    from ingestion import load_robust_nlp_models
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ingestion.py", line 13, in <module>
+    from transformers import pipeline
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\__init__.py", line 25, in <module>
+    from .chat_template_utils import DocstringParsingException, TypeHintParsingException, get_json_schema
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\chat_template_utils.py", line 40, in <module>
+    from torch import Tensor
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\__init__.py", line 229, in <module>
+    __all__ += [name for name in dir(_C)
+NameError: name '_C' is not defined
+
+2025-04-06 19:25:59,484 - main - INFO - Successfully initialized init_nlp_models in 0.02s
+2025-04-06 19:25:59,484 - main - INFO - Stage 8/8: Data Collection
+2025-04-06 19:25:59,484 - main - INFO - Initializing init_data_collection
+2025-04-06 19:25:59,489 - main - ERROR - Error initializing data collection: name '_C' is not defined
+2025-04-06 19:25:59,489 - main - ERROR - Traceback (most recent call last):
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\main.py", line 372, in init_data_collection
+    from ingestion import initialize_reddit_client
+  File "C:\Users\Dell AI User\Downloads\Analyst Intelligence 1.0\trading_platform\ingestion.py", line 13, in <module>
+    from transformers import pipeline
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\dependency_versions_check.py", line 16, in <module>
+    from .utils.versions import require_version, require_version_core
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\__init__.py", line 25, in <module>
+    from .chat_template_utils import DocstringParsingException, TypeHintParsingException, get_json_schema
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\utils\chat_template_utils.py", line 40, in <module>
+    from torch import Tensor
+  File "C:\Users\Dell AI User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\__init__.py", line 229, in <module>
+    __all__ += [name for name in dir(_C)
+NameError: name '_C' is not defined
+
+2025-04-06 19:25:59,491 - main - INFO - Successfully initialized init_data_collection in 0.01s
+2025-04-06 19:25:59,591 - main - INFO - System Memory: Total: 32212.70 MB, Available: 13918.64 MB, Used: 56.8%
+2025-04-06 19:25:59,591 - main - INFO - CPU Usage: 13.2%
+2025-04-06 19:25:59,591 - main - INFO - Current Process Memory: 433.68 MB
+2025-04-06 19:25:59,591 - main - INFO - UI app initialized: False
+2025-04-06 19:25:59,591 - main - INFO - UI socketio initialized: False
+2025-04-06 19:25:59,591 - main - INFO - Model class initialized: True
+2025-04-06 19:25:59,591 - main - INFO - Integration module initialized: True
+2025-04-06 19:25:59,591 - main - INFO - Starting system initialization process...
+2025-04-06 19:25:59,591 - main - INFO - System Memory: Total: 32212.70 MB, Available: 13918.64 MB, Used: 56.8%
+2025-04-06 19:25:59,591 - main - INFO - CPU Usage: 0.0%
+2025-04-06 19:25:59,591 - main - INFO - Current Process Memory: 433.68 MB
+2025-04-06 19:25:59,591 - main - CRITICAL - Failed to initialize web server

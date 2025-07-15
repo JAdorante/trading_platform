@@ -1,0 +1,17 @@
+{
+  "training_date": "2025-04-06T19:25:21.312893",
+  "features_used": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Volume",
+    "SMA20",
+    "RSI",
+    "MACD",
+    "MACD_Signal",
+    "sentiment",
+    "mention_count"
+  ],
+  "data_rows": 249
+}
